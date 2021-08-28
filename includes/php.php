@@ -17,3 +17,16 @@ function natksort(&$array){
 	$array = array_flip($flipped);
 }
 endif;
+
+
+if ( ! function_exists( 'wph_is_json' ) ):
+/**
+ * WPH is_json
+ * Test if string is valid JSON
+ * 
+ * @link https://subinsb.com/php-check-if-string-is-json/
+ */
+function wph_is_json( $string ){
+	return is_string($string) && is_array(json_decode($string, true)) && (json_last_error() == JSON_ERROR_NONE) ? true : false;
+}
+endif;
