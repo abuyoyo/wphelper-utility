@@ -2,6 +2,13 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.3](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.3/)
+Release Date: Aug 28 2021
+
+### Added
+- PHP:
+  - `whp_is_json()` - test if sting is valid json.
+
 ## [0.2](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.2/)
 Release Date: Apr 10 2021
 
