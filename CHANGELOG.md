@@ -7,7 +7,7 @@ Release Date: Aug 28 2021
 
 ### Added
 - PHP:
-  - `whp_is_json()` - test if sting is valid json.
+  - `whp_is_json()` - test if string is valid json.
 
 ## [0.2](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.2/)
 Release Date: Apr 10 2021
