@@ -46,12 +46,12 @@ if ( ! function_exists( 'pre_print' ) ):
  */
 function pre_print( $output, $echo = true ){
 	if ( is_array( $output ) || is_object( $output ) ){
-		$output = print_r( $output, true );
+		$output = htmlspecialchars( print_r( $output, true ) );
 	}
 
 	$output = sprintf(
 		'<pre>%s</pre>',
-		htmlspecialchars($output)
+		$output
 	);
 
 	if ( $echo ){
