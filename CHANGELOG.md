@@ -2,6 +2,13 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.5](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.5/)
+Release Date: Jan 31 2023
+
+### Added
+- Custom debug utilities:
+  - `qm_debug()` - Wrapper function for Query Monitor `QM::debug()`.
+
 ## [0.4](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.4/)
 Release Date: Jan 15 2023
 
