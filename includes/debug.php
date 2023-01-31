@@ -34,7 +34,29 @@ function wp_dump( $item, $title = ''  ){
 	var_dump( $item );
 	$dump = ob_get_clean();
 
-	wp_die( "<pre>$dump</pre>", $title );
+	$dump = pre_print( $dump, false );
+
+	wp_die( $dump, $title );
+}
+endif;
+
+
+
+if ( ! function_exists( 'qm_debug' ) ):
+/**
+ * QM::debug wrapper function
+ * 
+ * @param string $message
+ * @param array<string, mixed> $context
+ * @return void
+ */
+function qm_debug( $message, $context = [] ){
+
+	// Validate Query Monitor activated
+	if ( ! class_exists('QM') )
+		return;
+
+	QM::debug( $message, $context );
 }
 endif;
 
