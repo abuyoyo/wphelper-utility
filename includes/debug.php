@@ -40,6 +40,26 @@ endif;
 
 
 
+if ( ! function_exists( 'qm_debug' ) ):
+/**
+ * QM::debug wrapper function
+ * 
+ * @param string $message
+ * @param array<string, mixed> $context
+ * @return void
+ */
+function qm_debug( $message, $context = [] ){
+
+	// Validate Query Monitor activated
+	if ( ! class_exists('QM') )
+		return;
+
+	QM::debug( $message, $context );
+}
+endif;
+
+
+
 if ( ! function_exists( 'br' ) ):
 /**
  * BR
