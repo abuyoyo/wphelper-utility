@@ -34,7 +34,9 @@ function wp_dump( $item, $title = ''  ){
 	var_dump( $item );
 	$dump = ob_get_clean();
 
-	wp_die( "<pre>$dump</pre>", $title );
+	$dump = pre_print( $dump, false );
+
+	wp_die( $dump, $title );
 }
 endif;
 
