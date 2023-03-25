@@ -9,6 +9,8 @@ if ( ! function_exists( 'get_http_response_code' ) ):
 /**
  * Get HTTP Response Code
  * 
+ * @package WPHelper\Utility
+ * 
  * @param string $url URL to test
  * @return int HTTP code 
  */
@@ -34,6 +36,8 @@ endif;
 if ( ! function_exists( 'pre_print' ) ):
 /**
  * Print array or object in pre-formatted HTML. Also accepts scalars.
+ * 
+ * @package WPHelper\Utility
  * 
  * @param mixed $output
  * @param boolean $echo If true echoes the output. Otherwise returns pre-formatted html string
@@ -63,16 +67,19 @@ if ( ! function_exists( 'camelCaseKeys' ) ):
 /**
  * convert array keys from under_score to camelCase
  * 
- * @since 0.4
- *
- * @param   array   $array          array to convert
- * @param   array   $arrayHolder    parent array holder for recursive array
- * @return  array   camelCase array
  * @link https://gist.github.com/goldsky/3372487
  *
  * with a more elegant code from here (that apparently doesn't work):
  * @link https://stackoverflow.com/questions/2791998/convert-dashes-to-camelcase-in-php
- *
+ * 
+ * @since 0.4
+ * 
+ * @package WPHelper\Utility
+ * 
+ * @param   array   $array          array to convert
+ * @param   array   $arrayHolder    parent array holder for recursive array
+ * 
+ * @return  array   camelCase array
  */
 function camelCaseKeys($array, $arrayHolder = array()) {
 	$camelCaseArray = !empty($arrayHolder) ? $arrayHolder : array();

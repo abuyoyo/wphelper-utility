@@ -10,6 +10,8 @@ if ( ! function_exists( 'array_key_first' ) ):
  * Polyfill for array_key_first
  * 
  * @version PHP < 7.3.0
+ * 
+ * @package WPHelper\Utility
  */
 function array_key_first( array $arr ) {
 	foreach( $arr as $key => $unused ) {
@@ -27,6 +29,8 @@ if ( ! function_exists( 'str_contains' ) ):
  * Polyfill for str_contains
  * 
  * @version PHP < 8.0
+ * 
+ * @package WPHelper\Utility
  */
 function str_contains ( string $haystack , string $needle ) : bool
 {

@@ -8,6 +8,8 @@ if ( ! function_exists( 'wp_die_arr' ) ):
  * WP_DIE_ARR
  * 
  * Use wp_die to display preformatted PHP arrays and objects
+ * 
+ * @package WPHelper\Utility
  */
 function wp_die_arr( $item, $title = '' ){
 
@@ -28,6 +30,8 @@ if ( ! function_exists( 'wp_dump' ) ):
  * WP_DIE_ARR
  * 
  * Use wp_die to display preformatted var_dump
+ * 
+ * @package WPHelper\Utility
  */
 function wp_dump( $item, $title = ''  ){
 	ob_start();
@@ -45,6 +49,8 @@ endif;
 if ( ! function_exists( 'qm_debug' ) ):
 /**
  * QM::debug wrapper function
+ * 
+ * @package WPHelper\Utility
  * 
  * @param string $message
  * @param array<string, mixed> $context
@@ -67,6 +73,8 @@ if ( ! function_exists( 'br' ) ):
  * BR
  * 
  * shorthand for adding <br> tags and PHP_EOL to debug messages
+ * 
+ * @package WPHelper\Utility
  */
 function br(){
 
