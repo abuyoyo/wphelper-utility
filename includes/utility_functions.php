@@ -109,3 +109,5 @@ function camelCaseKeys($array, $arrayHolder = array()) {
 	return $camelCaseArray;
 }
 endif;
+
+include 'bespoke/wph_print_table.php';
