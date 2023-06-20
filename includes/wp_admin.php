@@ -9,6 +9,8 @@ if ( ! function_exists( 'wp_admin_get_post_type' ) ):
  * 
  * @link https://wordpress.stackexchange.com/questions/5837/get-post-type-on-edit-page
  * 
+ * @package WPHelper\Utility
+ * 
  * @return string post-type
  */
 function wp_admin_get_post_type() {
@@ -83,6 +85,8 @@ if ( ! function_exists( 'wp_get_current_admin_url' ) ):
  * Returns an empty string if it cannot generate a URL.
  * Based on WooCommerce wc_get_current_admin_url()
  * @link https://github.com/woocommerce/woocommerce/blob/master/includes/admin/wc-admin-functions.php#L506
+ * 
+ * @package WPHelper\Utility
  * 
  * @return string
  */

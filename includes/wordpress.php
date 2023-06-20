@@ -11,6 +11,8 @@ if ( ! function_exists( 'wp_strtotime' ) ):
  * wp_strtotime
  * strtotime function that uses wp_timezone()
  * 
+ * @package WPHelper\Utility
+ * 
  * @return int $timestamp
  */
 function wp_strtotime( $time ) {
