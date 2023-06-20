@@ -2,6 +2,19 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.6](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.6/)
+Release Date: Jun 20 2023
+
+### Added
+- Bespoke utility:
+  - `wph_print_table()` - Print multi-dimensional array or object as HTML table. Optional parameters `headers`, `id`, `classes`.
+
+### Changed
+- `pre_print` - Only escape HTML if input is array or object. When string HTML is assumed to be intentional.
+
+### Internal
+- Add `WPHelper\Utility` package tags to doc blocks.
+
 ## [0.5](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.5/)
 Release Date: Jan 31 2023
 
