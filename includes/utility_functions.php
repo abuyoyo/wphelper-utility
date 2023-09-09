@@ -33,36 +33,6 @@ function get_http_response_code($url){
 endif;
 
 
-if ( ! function_exists( 'pre_print' ) ):
-/**
- * Print array or object in pre-formatted HTML. Also accepts scalars.
- * 
- * @package WPHelper\Utility
- * 
- * @param mixed $output
- * @param boolean $echo If true echoes the output. Otherwise returns pre-formatted html string
- * 
- * @return void|string
- */
-function pre_print( $output, $echo = true ){
-	if ( is_array( $output ) || is_object( $output ) ){
-		$output = htmlspecialchars( print_r( $output, true ) );
-	}
-
-	$output = sprintf(
-		'<pre>%s</pre>',
-		$output
-	);
-
-	if ( $echo ){
-		echo $output;
-	} else {
-		return $output;
-	}
-}
-endif;
-
-
 if ( ! function_exists( 'camelCaseKeys' ) ):
 /**
  * convert array keys from under_score to camelCase
@@ -110,4 +80,9 @@ function camelCaseKeys($array, $arrayHolder = array()) {
 }
 endif;
 
+include 'deprecated/pre_print.php';
+
 include 'bespoke/wph_print_table.php';
+include 'bespoke/wph_card.php';
+include 'bespoke/wph_pre_print.php';
+include 'bespoke/wph_no_js_meta_box.php';
