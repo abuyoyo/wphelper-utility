@@ -86,3 +86,4 @@ function br(){
 endif;
 
 include 'debug/wph_die.php';
+include 'debug/wph_dump.php';
