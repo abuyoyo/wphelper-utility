@@ -84,3 +84,5 @@ function br(){
 		echo '<br>' . PHP_EOL; // ( BR == 'HTML' )
 }
 endif;
+
+include 'debug/wph_die.php';
