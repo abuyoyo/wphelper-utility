@@ -3,28 +3,6 @@
  * General custom functions used for debugging by abuyoyo
  */
 
-if ( ! function_exists( 'wp_die_arr' ) ):
-/**
- * WP_DIE_ARR
- * 
- * Use wp_die to display preformatted PHP arrays and objects
- * 
- * @package WPHelper\Utility
- */
-function wp_die_arr( $item, $title = '' ){
-
-	$item = pre_print( $item, false );
-
-	if ( ! empty( $title ) ){
-		$item = '<h1>' . $title . '</h1>' . PHP_EOL . $item;
-	}
-
-	wp_die( $item, $title );
-}
-endif;
-
-
-
 if ( ! function_exists( 'wp_dump' ) ):
 /**
  * WP_DIE_ARR
@@ -63,6 +41,8 @@ function br(){
 		echo '<br>' . PHP_EOL; // ( BR == 'HTML' )
 }
 endif;
+
+include 'deprecated/wp_die_arr.php';
 
 include 'debug/qm_debug.php';
 include 'debug/wph_die.php';
