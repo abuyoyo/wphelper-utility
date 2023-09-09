@@ -2,6 +2,26 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.7](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.7/)
+Release Date: Sep 9 2023
+
+### Added
+- Bespoke utility:
+  - `wph_card()` - Print "card" div.
+  - `wph_pre_print()` - Namespaced `pre_print`.
+  - `wph_no_js_meta_box()` - Print collapsible meta-box using HTML only.
+- Debug utility:
+  - `wph_die()` - Namespaced `wp_die_arr()`.
+  - `wph_dump()` - Namespaced `wp_dump()`.
+
+### Deprecated
+- `pre_print()`.
+- `wp_die_arr()`.
+- `wp_dump()`.
+
+### Internal
+- Move functions to dedicated "include" files.
+
 ## [0.6](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.6/)
 Release Date: Jun 20 2023
 
