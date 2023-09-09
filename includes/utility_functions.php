@@ -111,3 +111,4 @@ function camelCaseKeys($array, $arrayHolder = array()) {
 endif;
 
 include 'bespoke/wph_print_table.php';
+include 'bespoke/wph_card.php';
