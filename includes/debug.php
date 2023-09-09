@@ -3,28 +3,6 @@
  * General custom functions used for debugging by abuyoyo
  */
 
-if ( ! function_exists( 'wp_dump' ) ):
-/**
- * WP_DIE_ARR
- * 
- * Use wp_die to display preformatted var_dump
- * 
- * @package WPHelper\Utility
- */
-function wp_dump( $item, $title = ''  ){
-	ob_start();
-	var_dump( $item );
-	$dump = ob_get_clean();
-
-	$dump = pre_print( $dump, false );
-
-	wp_die( $dump, $title );
-}
-endif;
-
-
-
-
 if ( ! function_exists( 'br' ) ):
 /**
  * BR
@@ -43,6 +21,7 @@ function br(){
 endif;
 
 include 'deprecated/wp_die_arr.php';
+include 'deprecated/wp_dump.php';
 
 include 'debug/qm_debug.php';
 include 'debug/wph_die.php';
