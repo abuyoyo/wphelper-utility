@@ -45,3 +45,5 @@ function str_contains ( string $haystack , string $needle ) : bool
 	return ( strpos( $haystack, $needle ) !== false );
 }
 endif;
+
+include 'polyfill/json_validate.php';
