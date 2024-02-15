@@ -9,3 +9,4 @@ require_once 'includes/wordpress.php';
 require_once 'includes/wp_admin.php';
 require_once 'includes/utility_functions.php';
 require_once 'includes/debug.php';
+require_once 'includes/deprecated.php';

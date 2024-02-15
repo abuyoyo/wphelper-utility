@@ -2,6 +2,16 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.8](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.8/)
+Release Date: Feb 15 2024
+
+### Added
+- PHP Polyfill:
+  - `json_validate()` for PHP < 8.3.
+
+### Deprecated
+- `whp_is_json()`.
+
 ## [0.7](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.7/)
 Release Date: Sep 9 2023
 
