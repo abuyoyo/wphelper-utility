@@ -80,8 +80,6 @@ function camelCaseKeys($array, $arrayHolder = array()) {
 }
 endif;
 
-include 'deprecated/pre_print.php';
-
 include 'bespoke/wph_print_table.php';
 include 'bespoke/wph_card.php';
 include 'bespoke/wph_pre_print.php';
