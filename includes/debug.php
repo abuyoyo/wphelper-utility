@@ -20,9 +20,6 @@ function br(){
 }
 endif;
 
-include 'deprecated/wp_die_arr.php';
-include 'deprecated/wp_dump.php';
-
 include 'debug/qm_debug.php';
 include 'debug/wph_die.php';
 include 'debug/wph_dump.php';
