@@ -2,6 +2,12 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.9](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.9/)
+Release Date: Mar 9 2024
+
+### Fixed
+- Fix `require_once` in `functions.php` to use absolute paths. This caused `vendor\autoload` to throw fatal errors.
+
 ## [0.8](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.8/)
 Release Date: Feb 15 2024
 
