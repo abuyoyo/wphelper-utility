@@ -84,7 +84,7 @@ Release Date: Apr 10 2021
 - WordPress Admin utility functions:
   - `wp_admin_get_post_type()` - get_post_type that works on admin side.
   - `wp_get_current_admin_url()` - get url of current admin page.
-- WordPress utiliy functions:
+- WordPress utility functions:
   - `wp_strtotime()` - strtotime-like function that uses wp_timezone.
 - Utility functions:
   - `get_http_response_code()` - get HTTP response status of url.
