@@ -2,6 +2,15 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.10](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.10/)
+Release Date: Apr 8 2024
+
+### Added
+- Trait:
+  - `PluginCoreStaticWrapper` - Allow plugins using `WPHelper\PluginCore` static access to methods like `path`, `url`, `version` etc.
+- Bespoke utility:
+  - `wph_pre_dump()` - Print `var_dump()` output in HTML `pre` tag.
+
 ## [0.9](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.9/)
 Release Date: Mar 9 2024
 
