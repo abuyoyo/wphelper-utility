@@ -11,6 +11,7 @@ use WPHelper\PluginCore;
  * @package WPHelper\Utility
  * 
  * @since 0.10
+ * @since 0.11 Getter method plugin_core()
  */
 trait PluginCoreStaticWrapper {
 
@@ -119,6 +120,16 @@ trait PluginCoreStaticWrapper {
 	public static function version()
 	{
 		return self::$plugin_core->version();
+	}
+
+	/**
+	 * @since 0.11
+	 * 
+	 * @return Plugin_Core instance
+	 */
+	public static function plugin_core()
+	{
+		return self::$plugin_core;
 	}
 	
 }
