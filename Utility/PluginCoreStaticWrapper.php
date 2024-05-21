@@ -8,7 +8,9 @@ use WPHelper\PluginCore;
  * 
  * Expose PluginCore instance methods as static methods.
  * 
- * @since WPHelper\Utility 0.10
+ * @package WPHelper\Utility
+ * 
+ * @since 0.10
  */
 trait PluginCoreStaticWrapper {
 
@@ -16,7 +18,12 @@ trait PluginCoreStaticWrapper {
 	private static $plugin_core;
 
 	/**
-	 * @param string|PluginCore $plugin_core
+	 * Set private static plugin_core instance.
+	 * Run this method from constructor.
+	 * 
+	 * @since 0.10
+	 * 
+	 * @param string|PluginCore $plugin_core - Accepts plugin file path or plugin slug or PluginCore instance. 
 	 */
 	private static function set_plugin_core( string|PluginCore $plugin_core ) {
 
@@ -37,6 +44,8 @@ trait PluginCoreStaticWrapper {
 	}
 
 	/**
+	 * @since 0.10
+	 * 
 	 * Expose PluginCore methods as our own static methods.
 	 */
 	public static function __callStatic( $name, $arguments )
@@ -45,6 +54,8 @@ trait PluginCoreStaticWrapper {
 	}
 
 	/**
+	 * @since 0.10
+	 * 
 	 * @return string Plugin title.
 	 */
 	public static function title()
@@ -53,6 +64,8 @@ trait PluginCoreStaticWrapper {
 	}
 
 	/**
+	 * @since 0.10
+	 * 
 	 * @param string $extension (optional) Extension string.
 	 * 
 	 * @return string Plugin slug + optional extension (ie. 'my-slug-extension').
@@ -63,6 +76,8 @@ trait PluginCoreStaticWrapper {
 	}
 
 	/**
+	 * @since 0.10
+	 * 
 	 * @param string $extension (optional) Extension string.
 	 * 
 	 * @return string Plugin underscored + lowercase token + optional extension (ie. 'my_token_extension').
@@ -73,6 +88,8 @@ trait PluginCoreStaticWrapper {
 	}
 
 	/**
+	 * @since 0.10
+	 * 
 	 * @param string $path (optional) Path relative to plugin file.
 	 * 
 	 * @return string Plugin file path (+ optional relative path).
@@ -83,6 +100,8 @@ trait PluginCoreStaticWrapper {
 	}
 
 	/**
+	 * @since 0.10
+	 * 
 	 * @param string $url (optional) Path relative to plugin URL.
 	 * 
 	 * @return string Plugin URL (+ optional relative path).
@@ -93,6 +112,8 @@ trait PluginCoreStaticWrapper {
 	}
 
 	/**
+	 * @since 0.10
+	 * 
 	 * @return string Plugin version
 	 */
 	public static function version()
