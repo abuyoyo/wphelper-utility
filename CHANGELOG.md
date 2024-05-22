@@ -2,6 +2,13 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.11](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.11/)
+Release Date: May 23 2024
+
+### Added
+- Trait method:
+  - Getter method `PluginCoreStaticWrapper::plugin_core()` returns PluginCore instance.
+
 ## [0.10](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.10/)
 Release Date: Apr 8 2024
 
