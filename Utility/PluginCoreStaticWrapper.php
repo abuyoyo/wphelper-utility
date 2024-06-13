@@ -6,7 +6,8 @@ use WPHelper\PluginCore;
 /**
  * PluginCoreStaticWrapper trait
  * 
- * Expose PluginCore instance methods as static methods.
+ * Expose PluginCore instance methods as static methods. \
+ * Requires WPHelper\PluginCore >= 0.28
  * 
  * @package WPHelper\Utility
  * 
