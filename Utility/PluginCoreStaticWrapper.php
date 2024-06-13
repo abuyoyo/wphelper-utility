@@ -13,11 +13,15 @@ use WPHelper\PluginCore;
  * 
  * @since 0.10
  * @since 0.11 Getter method plugin_core()
+ * @since 0.12 Utility method cache_buster()
  */
 trait PluginCoreStaticWrapper {
 
 	/** @var PluginCore */
 	protected static $plugin_core;
+
+	/** @var string */
+	protected static $cache_buster;
 
 	/**
 	 * Set protected static plugin_core instance.
@@ -131,6 +135,21 @@ trait PluginCoreStaticWrapper {
 	public static function plugin_core()
 	{
 		return self::$plugin_core;
+	}
+
+	/**
+	 * Plugin utility method. \
+	 * Generate appropriate cache buster string for enqueuing scripts and styles.
+	 * 
+	 * @since 0.12
+	 * 
+	 * @return string cache buster - plugin version on production. timestamp otherwise.
+	 */
+	public static function cache_buster()
+	{
+		return self::$cache_buster ??= ( 'production' == wp_get_environment_type() )
+			? self::version()
+			: (string) time();
 	}
 	
 }
