@@ -17,17 +17,17 @@ use WPHelper\PluginCore;
 trait PluginCoreStaticWrapper {
 
 	/** @var PluginCore */
-	private static $plugin_core;
+	protected static $plugin_core;
 
 	/**
-	 * Set private static plugin_core instance.
+	 * Set protected static plugin_core instance.
 	 * Run this method from constructor.
 	 * 
 	 * @since 0.10
 	 * 
 	 * @param string|PluginCore $plugin_core - Accepts plugin file path or plugin slug or PluginCore instance. 
 	 */
-	private static function set_plugin_core( string|PluginCore $plugin_core ) {
+	protected static function set_plugin_core( string|PluginCore $plugin_core ) {
 
 		if ( is_a( $plugin_core, PluginCore::class ) ) {
 			self::$plugin_core = $plugin_core;
