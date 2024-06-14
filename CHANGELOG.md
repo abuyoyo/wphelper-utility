@@ -2,6 +2,20 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.12](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.12/)
+Release Date: Jun 14 2024
+
+### Added
+- Trait method:
+  - Utility method `PluginCoreStaticWrapper::cache_buster()` returns cache-buster string. Plugin version on production. Timestamp otherwise.
+
+### Fixed
+- Fix `PHP Warning: Constant WPHELPER_JSON_MAX_DEPTH already defined` when multiple WPHelper\Utility libraries are available.
+
+### Internal
+- Move PHP polyfill functions to dedicated "include" files.
+- PluginCoreStaticWrapper - protected methods and variables.
+
 ## [0.11](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.11/)
 Release Date: May 23 2024
 

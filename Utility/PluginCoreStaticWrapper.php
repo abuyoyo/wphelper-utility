@@ -6,27 +6,32 @@ use WPHelper\PluginCore;
 /**
  * PluginCoreStaticWrapper trait
  * 
- * Expose PluginCore instance methods as static methods.
+ * Expose PluginCore instance methods as static methods. \
+ * Requires WPHelper\PluginCore >= 0.28
  * 
  * @package WPHelper\Utility
  * 
  * @since 0.10
  * @since 0.11 Getter method plugin_core()
+ * @since 0.12 Utility method cache_buster()
  */
 trait PluginCoreStaticWrapper {
 
 	/** @var PluginCore */
-	private static $plugin_core;
+	protected static $plugin_core;
+
+	/** @var string */
+	protected static $cache_buster;
 
 	/**
-	 * Set private static plugin_core instance.
+	 * Set protected static plugin_core instance.
 	 * Run this method from constructor.
 	 * 
 	 * @since 0.10
 	 * 
 	 * @param string|PluginCore $plugin_core - Accepts plugin file path or plugin slug or PluginCore instance. 
 	 */
-	private static function set_plugin_core( string|PluginCore $plugin_core ) {
+	protected static function set_plugin_core( string|PluginCore $plugin_core ) {
 
 		if ( is_a( $plugin_core, PluginCore::class ) ) {
 			self::$plugin_core = $plugin_core;
@@ -130,6 +135,21 @@ trait PluginCoreStaticWrapper {
 	public static function plugin_core()
 	{
 		return self::$plugin_core;
+	}
+
+	/**
+	 * Plugin utility method. \
+	 * Generate appropriate cache buster string for enqueuing scripts and styles.
+	 * 
+	 * @since 0.12
+	 * 
+	 * @return string cache buster - plugin version on production. timestamp otherwise.
+	 */
+	public static function cache_buster()
+	{
+		return self::$cache_buster ??= ( 'production' == wp_get_environment_type() )
+			? self::version()
+			: (string) time();
 	}
 	
 }
