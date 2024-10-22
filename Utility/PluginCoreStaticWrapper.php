@@ -130,7 +130,7 @@ trait PluginCoreStaticWrapper {
 	/**
 	 * @since 0.11
 	 * 
-	 * @return Plugin_Core instance
+	 * @return \WPHelper\Plugin_Core instance
 	 */
 	public static function plugin_core()
 	{
