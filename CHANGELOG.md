@@ -2,6 +2,15 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
+## [0.13](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.13/)
+Release Date: Mar 4 2025
+
+### Changed
+- Add `options` parameter to `PluginCoreStaticWrapper::set_plugin_core()`. Supports `WPHelper\PluginCore` >= 0.32 option `init_if_null`.
+
+### Fixed
+- Fix PHP 8.1 deprecated passing null to parameter notice.
+
 ## [0.12](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.12/)
 Release Date: Jun 14 2024
 
