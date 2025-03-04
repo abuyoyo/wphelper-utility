@@ -1,6 +1,7 @@
 <?php
 namespace WPHelper\Utility;
 
+use ReflectionMethod;
 use WPHelper\PluginCore;
 
 /**
@@ -28,15 +29,29 @@ trait PluginCoreStaticWrapper {
 	 * Run this method from constructor.
 	 * 
 	 * @since 0.10
+	 * @since 0.13 - Add $options parameter. Support PluginCore >= 0.32 init_if_null.
 	 * 
-	 * @param string|PluginCore $plugin_core - Accepts plugin file path or plugin slug or PluginCore instance. 
+	 * @param string|PluginCore $plugin_core - Accepts plugin file path or plugin slug or PluginCore instance.
+	 * @param array             $options     - (Optional) Arguments sent to PluginCore constructor
 	 */
-	protected static function set_plugin_core( string|PluginCore $plugin_core ) {
+	protected static function set_plugin_core( string|PluginCore $plugin_core, array $options = [] ) {
+
 
 		if ( is_a( $plugin_core, PluginCore::class ) ) {
 			self::$plugin_core = $plugin_core;
 		} else if ( is_readable( $plugin_core ) ) {
+
+			// PluginCore <= 0.31 support
 			self::$plugin_core = PluginCore::get_by_file( $plugin_core );
+			
+			// PluginCore >= 0.32 support - Init if null
+			if ( self::$plugin_core === null ) {
+				$reflection = new ReflectionMethod( PluginCore::class, 'get_by_file' );
+				if ( $reflection->getNumberOfParameters() === 3 ) {
+					self::$plugin_core = PluginCore::get_by_file( $plugin_core, true, $options ); // init_if_null = true
+				}
+			}
+			
 		} else {
 			self::$plugin_core = PluginCore::get( $plugin_core );
 		}
