@@ -105,7 +105,7 @@ trait PluginCoreStaticWrapper {
 	 */
 	public static function token( $extension = '' )
 	{
-		return rtrim( self::$plugin_core->token() . '_' . str_replace( '-', '_', $extension ), '_' );
+		return rtrim( self::$plugin_core->token() . '_' . str_replace( '-', '_', $extension ?? '' ), '_' );
 	}
 
 	/**
