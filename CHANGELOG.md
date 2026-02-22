@@ -2,7 +2,14 @@
 
 All notable changes to WPHelper\Utility library since version 0.1
 
-## [0.14](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.8/)
+## [0.15](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.15/)
+Release Date: Feb 22 2026
+
+### Fixed
+  - `wph_admin_get_post_type()`
+  - `wp_admin_get_post_type()`
+
+## [0.14](https://github.com/abuyoyo/wphelper-utility/releases/tag/0.14/)
 Release Date: Feb 22 2026
 
 ### Added
