@@ -43,8 +43,8 @@ if ( ! function_exists( 'wp_admin_get_post_type' ) ):
 		if ( empty( $post_type ) && ! empty( $typenow ) )
 			$post_type = $typenow;
 	
-		if ( empty( $post_type ) && function_exists( 'get_current_screen' ) )
-			$post_type = get_current_screen();
+		if ( empty( $post_type ) && function_exists( 'get_current_screen' ) && ( $screen = get_current_screen() ) )
+			$post_type = $screen->post_type;
 	
 		if (
 			empty( $post_type )
